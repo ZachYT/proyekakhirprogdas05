@@ -4,7 +4,7 @@
 struct DataInput
 {
     char nama[50];
-    int jumlah, jenis;
+    int jumlahsumber, jumlahled, jumlahpijar, jumlahpetroleum, jumlahobor, jenis;
     float daya, durasi;
 };
 
@@ -32,7 +32,23 @@ int main()
             scanf(" %[^\n]s", data[i].nama);
             printf("Jumlah sumber pencahayaan: ");
             scanf("%d", &data[i].jumlah);
+            do
+            {
             printf("Pilih jenis lampu pertama:");
+            printf("1. LED\n");
+            printf("2. Pijar\n");
+            printf("3. Petroleum\n");
+            printf("4. Obor\n");
+            scanf("%d", &data[i].jenis);
+            switch (data[i].jenis)
+            {    
+                case 1:
+                    printf("Masukkan jumlah sumber cahaya berjenis LED: ");
+                    scanf("%d", &data[i].jumlahled);
+                    if(data[i].jumlahled < data[i].jumlahsumber){
+                        
+            }
+            } while (data[i].jumlahled + data[i].jumlahpijar + data[i].jumlahpetroleum + data[i].jumlahobor > data[i].jumlahsumber);
             break;
         case 2:
 
